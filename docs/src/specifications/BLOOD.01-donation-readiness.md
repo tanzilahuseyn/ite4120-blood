@@ -24,10 +24,24 @@ screening, editing questions through the UI (they arrive by changeset),
 authentication management (mock auth only — the template signs every visitor
 in as a mock user, so the public/staff split is stated here but not enforced).
 
-**Open until the group's research is done:** the applicable jurisdiction
-(Estonia is assumed, as in the template), the final questions and eligibility
-rules, and the legal and privacy analysis. The seeded questions are
-placeholders taken from the group's notes, not medical guidance.
+**The questions** come from the Estonian donor criteria, checked 17.10.2026:
+Sotsiaalministri määrus nr 65, *Isiku doonoriks sobivuse kriteeriumid,
+hindamise tingimused ja kord* (RT I, 22.11.2023, 3; in force 25.11.2023), and
+the Estonian Blood Centre's guidance at verekeskus.ee. Twenty yes/no questions:
+five about preparation (`ADVISORY`) and fifteen about eligibility today
+(`BLOCKING`). Two choices are deliberate:
+
+- **Not asked:** sexual behaviour, HIV, hepatitis and drug use. They exclude
+  donors too, but the centre covers them in its confidential interview with
+  the doctor (§ 12), and asking here would collect more than necessary.
+- **Simplified:** for a tattoo, piercing or procedure the regulation says
+  6 months, or 4 with a negative NAT test; the questionnaire uses the Blood
+  Centre's public figure of 4 months.
+
+The questionnaire stays guidance: it covers the common reasons people are
+turned away, not every rule, and the centre's doctor decides.
+
+**Still open:** the legal and privacy analysis.
 
 ## Data model
 
@@ -58,8 +72,10 @@ placeholders taken from the group's notes, not medical guidance.
 
 Three tables, one foreign key (`donation_centre → region`). Indexes on the
 business tables carry `where (sys_status = 'A')`. Regions are seeded with the
-reference table; demo centres and the placeholder questions arrive under
-`context:demo`. There is deliberately **no** answers table.
+reference table; demo centres arrive under `context:demo`. The readiness
+questions are real content and arrive in changeset 04, without a context; it
+also retires the placeholder questions the first demo data seeded. There is
+deliberately **no** answers table.
 
 ## API
 

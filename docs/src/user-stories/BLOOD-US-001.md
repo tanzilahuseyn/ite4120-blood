@@ -30,9 +30,8 @@ data about donors at all. Collect nothing that is not necessary.
 
 Out of scope: donor accounts and donation history, appointment booking, blood
 stock, the centre's own medical screening (staff at the centre always make the
-final decision). The questions and rules in this draft are placeholders until
-the group's research into the official eligibility guidance, the applicable
-jurisdiction and the legal requirements is done.
+final decision). The questions follow the official Estonian donor criteria
+and the Estonian Blood Centre's guidance; see BLOOD.01 for the sources.
 
 ## Acceptance criteria
 

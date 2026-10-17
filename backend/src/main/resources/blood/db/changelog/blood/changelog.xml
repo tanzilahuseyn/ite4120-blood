@@ -16,5 +16,7 @@
   <include file="blood/db/changelog/blood/02-donation-centre.sql"/>
   <include file="blood/db/changelog/blood/03-readiness-question.sql"/>
   <include file="blood/db/changelog/blood/90-demo-data.sql"/>
+  <!-- After 90 on purpose: 04 retires the placeholder questions that 90 seeds. -->
+  <include file="blood/db/changelog/blood/04-readiness-questions.sql"/>
 
 </databaseChangeLog>
