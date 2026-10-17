@@ -21,7 +21,7 @@ const componentRoutes = Object.values(
 
 export const App = () => (
   <Routes>
-    <Route path="/" element={<Navigate to="/animals" replace />} />
+    <Route path="/" element={<Navigate to="/centres" replace />} />
     <Route path="/animals" element={<AnimalList />} />
     <Route path="/animals/new" element={<AnimalCreate />} />
     <Route path="/animals/:id" element={<AnimalDetail />} />
